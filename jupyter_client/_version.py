@@ -1,5 +1,5 @@
 version_info = (6, 2, 0)
-__version__ = ".".join(map(str, version_info))
+__version__ = ".".join(map(str, version_info)) + "+juno"
 
 protocol_version_info = (5, 3)
 protocol_version = "%i.%i" % protocol_version_info
