@@ -10,6 +10,10 @@ import sys
 
 import nest_asyncio  # type: ignore
 
+# https://github.com/dleen/jupyter_client/commit/8f832acbf90a804bdc28a7a2f5bcca8bf5c3de3f
+# Can be removed after upgrading jupyter_client
+nest_asyncio.apply()
+
 if os.name == "nt" and sys.version_info >= (3, 7):
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())  # type: ignore
 

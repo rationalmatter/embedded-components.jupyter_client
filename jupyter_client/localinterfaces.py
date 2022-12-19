@@ -57,7 +57,8 @@ def _requires_ips(f):
     """decorator to ensure load_ips has been run before f"""
 
     def ips_loaded(*args, **kwargs):
-        _load_ips()
+        # Use a quick-and-dumb version of this function
+        _load_ips_dumb()
         return f(*args, **kwargs)
 
     return ips_loaded
